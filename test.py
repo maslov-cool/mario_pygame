@@ -18,7 +18,7 @@ def terminate():
 
 
 def load_image(name, colorkey=None):
-    fullname = os.path.join('data', name)
+    fullname = os.path.join(name)
     # если файл не существует, то выходим
     if not os.path.isfile(fullname):
         print(f"Файл с изображением '{fullname}' не найден")
@@ -75,7 +75,7 @@ player_image = load_image('mar.png')
 
 
 def load_level(filename):
-    filename = "data/" + filename
+    filename = filename
     # читаем уровень, убирая символы перевода строки
     with open(filename, 'r') as mapFile:
         level_map = [line.strip() for line in mapFile]
